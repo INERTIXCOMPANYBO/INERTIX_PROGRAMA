@@ -18,6 +18,7 @@
     .floating-logo{position:fixed;left:clamp(16px,4vw,64px);bottom:clamp(18px,5vh,48px);z-index:15;width:clamp(110px,12vw,155px);pointer-events:none;will-change:transform;animation:logoTravel var(--logo-duration,12s) linear infinite;animation-iteration-count:infinite;animation-play-state:running}.floating-logo img{width:100%;height:auto;filter:drop-shadow(0 12px 16px rgba(7,19,38,.2))}@keyframes logoTravel{0%{transform:translate3d(0,0,0) rotate(360deg)}52%{transform:translate3d(var(--travel),0,0) rotate(1440deg)}70%{transform:translate3d(var(--travel),0,0) rotate(1440deg)}78%{transform:translate3d(var(--travel),0,0) rotate(1440deg)}96%{transform:translate3d(0,0,0) rotate(1440deg)}100%{transform:translate3d(0,0,0) rotate(1440deg)}}
     @media(max-width:600px){.floating-logo{width:clamp(110px,30vw,125px);bottom:20px}.floating-logo img{filter:drop-shadow(0 9px 13px rgba(7,19,38,.18))}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{animation:none;transition:none}.reveal{opacity:1;transform:none}.format-slide{transition:none}}
+    .preventa{position:relative;overflow:hidden;background:linear-gradient(135deg,#071326 0%,#0d2746 56%,#12375d 100%);color:#fff;padding:78px 0}.preventa:before,.preventa:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.preventa:before{width:520px;height:520px;right:-225px;top:-330px;border:1px solid rgba(214,243,107,.28);box-shadow:0 0 0 48px rgba(214,243,107,.04),0 0 0 96px rgba(214,243,107,.025)}.preventa:after{width:270px;height:270px;left:-155px;bottom:-165px;background:rgba(242,103,34,.17);filter:blur(5px)}.preventa-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(430px,.92fr);align-items:center;gap:62px}.preventa-copy{max-width:625px}.preventa .kicker{color:var(--lime)}.preventa h2{font-size:clamp(2.5rem,5vw,4.55rem);letter-spacing:-.065em;margin:16px 0}.preventa h2 em{color:var(--orange-2)}.preventa-copy>p{color:rgba(255,255,255,.72);font-size:1.07rem;margin:0}.price-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:27px 0 8px}.price-tag{display:inline-flex;align-items:center;gap:8px;border-radius:999px;background:var(--lime);color:var(--navy);padding:9px 15px;font-size:.76rem;letter-spacing:.1em;font-weight:900;text-transform:uppercase}.price{font-family:"Space Grotesk",sans-serif;font-size:clamp(3rem,6vw,5.2rem);font-weight:700;line-height:.95;letter-spacing:-.08em;color:#fff}.price small{font-size:.43em;letter-spacing:-.03em}.preventa-card{background:rgba(255,255,255,.98);color:var(--navy);border:1px solid rgba(255,255,255,.54);border-radius:28px;padding:26px;box-shadow:0 26px 70px rgba(0,0,0,.25)}.preventa-card-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:21px}.preventa-card-head span{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;color:#596d7b}.status-dot{width:10px;height:10px;flex:0 0 10px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px rgba(242,103,34,.13)}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.countdown-unit{min-width:0;background:#eef5f3;border:1px solid #dbe8e4;border-radius:16px;padding:14px 7px 12px;text-align:center}.countdown-value{display:block;color:#062b21;font-family:"Space Grotesk",sans-serif;font-size:clamp(1.55rem,3.5vw,2.35rem);font-weight:700;letter-spacing:-.07em;line-height:1}.countdown-label{display:block;margin-top:7px;color:#5b6c70;font-size:.64rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.preventa-message{margin:19px 0 0;padding:14px 16px;border-left:3px solid var(--orange);border-radius:0 11px 11px 0;background:#f6f8f7;color:#526174;font-size:.92rem;font-weight:600;line-height:1.45}.preventa-card .btn{width:100%;margin-top:20px}.preventa-card.is-active .status-dot{background:#39c779;box-shadow:0 0 0 5px rgba(57,199,121,.14);animation:pulse 1.8s ease-in-out infinite}.preventa-card.is-finished .status-dot{background:#8a99a8;box-shadow:0 0 0 5px rgba(138,153,168,.13)}@keyframes pulse{50%{transform:scale(.7);opacity:.55}}@media(max-width:850px){.preventa{padding:64px 0}.preventa-grid{grid-template-columns:1fr;gap:35px}.preventa-copy{text-align:center;margin:auto}.price-row{justify-content:center}.preventa-card{max-width:560px;width:100%;margin:auto}}@media(max-width:480px){.preventa{padding:52px 0}.preventa-card{padding:20px 15px;border-radius:21px}.preventa-card-head{margin-bottom:15px}.countdown{gap:6px}.countdown-unit{padding:12px 4px 10px;border-radius:12px}.countdown-value{font-size:1.62rem}.countdown-label{font-size:.56rem;letter-spacing:.05em}.preventa-message{font-size:.84rem}}
   </style>
 </head>
 <body>
@@ -25,6 +26,17 @@
   <header class="site-header"><div class="wrap nav"><a class="brand" href="#inicio"><img src="assets/logo_inertix_transparent.png" alt="INERTIX"><span>INERT<i>IX</i></span></a><nav class="menu" aria-label="Navegación"><a href="#funciones">Funciones</a><a href="#normativa">Normativa</a><a href="#formatos">Formatos</a><a href="#autor">Ing. Samuel</a><a href="#contacto">Contacto</a></nav><a class="btn" href="https://wa.me/59169334671?text=Hola,%20quiero%20conocer%20INERTIX" target="_blank" rel="noopener">Quiero INERTIX →</a></div></header>
   <div class="floating-logo" aria-hidden="true"><img src="assets/logo_inertix_transparent.png" alt=""></div>
   <main>
+    <section class="preventa" id="preventa" aria-labelledby="preventa-title">
+      <div class="wrap preventa-grid">
+        <div class="preventa-copy"><span class="kicker">Lanzamiento INERTIX</span><h2 id="preventa-title">Preventa por tiempo <em>limitado.</em></h2><p>Accede a INERTIX con un precio especial de lanzamiento y empieza a llevar tus cálculos de obra con mayor claridad, rapidez y respaldo técnico.</p><div class="price-row"><span class="price-tag">Precio de preventa</span><strong class="price">70 <small>Bs</small></strong></div></div>
+        <aside class="preventa-card" id="preventa-card" aria-live="polite" aria-atomic="true">
+          <div class="preventa-card-head"><span id="preventa-status">Falta poco para la preventa</span><i class="status-dot" aria-hidden="true"></i></div>
+          <div class="countdown" aria-label="Cuenta regresiva"><div class="countdown-unit"><strong class="countdown-value" id="preventa-days">00</strong><span class="countdown-label">Días</span></div><div class="countdown-unit"><strong class="countdown-value" id="preventa-hours">00</strong><span class="countdown-label">Horas</span></div><div class="countdown-unit"><strong class="countdown-value" id="preventa-minutes">00</strong><span class="countdown-label">Min</span></div><div class="countdown-unit"><strong class="countdown-value" id="preventa-seconds">00</strong><span class="countdown-label">Seg</span></div></div>
+          <p class="preventa-message" id="preventa-message">La preventa inicia el jueves a las 8:00 a. m. y estará disponible durante una semana.</p>
+          <a class="btn" id="preventa-button" href="https://wa.me/59169334671?text=Hola,%20quiero%20reservar%20INERTIX%20en%20preventa" target="_blank" rel="noopener">Reservar preventa por 70 Bs →</a>
+        </aside>
+      </div>
+    </section>
     <section class="hero" id="inicio"><div class="wrap hero-grid"><div class="hero-copy"><span class="eyebrow">Ingeniería · Construcción · ACI</span><h1>Tu obra.<br>Tu cálculo.<br><em>En tu bolsillo.</em></h1><p>INERTIX reúne dosificación de hormigón y verificación estructural en una herramienta práctica para trabajar con más claridad, rapidez y respaldo técnico.</p><div class="actions"><a class="btn" href="https://wa.me/59169334671?text=Hola,%20quiero%20una%20demostraci%C3%B3n%20de%20INERTIX" target="_blank" rel="noopener">Solicitar demostración →</a><a class="btn dark" href="#funciones">Explorar funciones</a></div><div class="hero-note"><span><strong>ACI 211.1-22</strong>Dosificación</span><span><strong>ACI 318-25</strong>Verificación</span><span><strong>PDF</strong>Reportes listos</span></div></div><div class="device-stage"><div class="phone phone-left"><img src="assets/2.jpeg" alt="Pantalla de INERTIX"></div><div class="phone phone-main"><img src="assets/5.jpeg" alt="Pantalla principal de INERTIX"></div><div class="phone phone-right"><img src="assets/6.jpeg" alt="Pantalla de INERTIX"></div><div class="float-card"><b>Resultado en tiempo real</b>CUMPLE / NO CUMPLE</div></div></div></section>
     <section class="section" id="funciones"><div class="wrap"><div class="section-head"><span class="kicker">Una herramienta, más control</span><h2>Enfocadas con <em>Seguridad y Claridad.</em></h2><p>Criterio técnico sin improvisaciones.
 Desde la dosificación del material hasta la verificación de vigas y columnas, INERTIX transforma tus datos de obra en resultados que puedes interpretar y compartir.</p></div><div class="feature-grid"><article class="feature"><div class="icon"><img src="assets/Dosificacion.webp" alt="Dosificación de hormigón"></div><h3>Dosificación de hormigón</h3><p>Calcula mezclas bajo ACI 211.1-22 considerando humedad, granulometría y relación agua/cemento.</p></article><article class="feature"><div class="icon"><img src="assets/Vigas_Columnas.jpg" alt="Vigas y columnas"></div><h3>Vigas y columnas</h3><p>Verifica flexión, corte, torsión, esbeltez y efectos de segundo orden con una lectura clara.</p></article><article class="feature"><div class="icon"><img src="assets/Reportes.jpg" alt="Reportes profesionales"></div><h3>Reportes profesionales</h3><p>Genera memorias de cálculo en PDF listas para revisar, documentar y presentar.</p></article></div></div></section>
@@ -46,6 +58,18 @@ INERTIX nace para resolver problemas reales en sitio donde supervisores, arquite
       const next = document.querySelector('.format-arrow.next');
       const formatButtons = [...document.querySelectorAll('[data-format]')];
       const floatingLogo = document.querySelector('.floating-logo');
+      const preventaCard = document.querySelector('#preventa-card');
+      const preventaStatus = document.querySelector('#preventa-status');
+      const preventaMessage = document.querySelector('#preventa-message');
+      const preventaButton = document.querySelector('#preventa-button');
+      const preventaUnits = {
+        days: document.querySelector('#preventa-days'),
+        hours: document.querySelector('#preventa-hours'),
+        minutes: document.querySelector('#preventa-minutes'),
+        seconds: document.querySelector('#preventa-seconds')
+      };
+      const preventaStart = new Date('2026-07-23T08:00:00-04:00');
+      const preventaEnd = new Date('2026-07-30T08:00:00-04:00');
       let current = 0;
       let timer;
       function goTo(index) {
@@ -87,8 +111,56 @@ INERTIX nace para resolver problemas reales en sitio donde supervisores, arquite
         floatingLogo.style.setProperty('--travel', `${travel}px`);
         floatingLogo.style.setProperty('--logo-duration', `${duration}s`);
       }
+      function formatPreventaDate(date) {
+        const dateText = new Intl.DateTimeFormat('es-BO', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'America/La_Paz' }).format(date);
+        return `${dateText.charAt(0).toUpperCase()}${dateText.slice(1)}, 8:00 a. m.`;
+      }
+      function setCountdown(milliseconds) {
+        let seconds = Math.max(0, Math.floor(milliseconds / 1000));
+        const days = Math.floor(seconds / 86400);
+        seconds -= days * 86400;
+        const hours = Math.floor(seconds / 3600);
+        seconds -= hours * 3600;
+        const minutes = Math.floor(seconds / 60);
+        seconds -= minutes * 60;
+        const twoDigits = value => String(value).padStart(2, '0');
+        preventaUnits.days.textContent = twoDigits(days);
+        preventaUnits.hours.textContent = twoDigits(hours);
+        preventaUnits.minutes.textContent = twoDigits(minutes);
+        preventaUnits.seconds.textContent = twoDigits(seconds);
+      }
+      function updatePreventa() {
+        const now = new Date();
+        const isBeforeStart = now < preventaStart;
+        const isActive = !isBeforeStart && now < preventaEnd;
+        preventaCard.classList.toggle('is-active', isActive);
+        preventaCard.classList.toggle('is-finished', !isBeforeStart && !isActive);
+        if (isBeforeStart) {
+          setCountdown(preventaStart - now);
+          preventaStatus.textContent = 'Falta poco para la preventa';
+          preventaMessage.textContent = `La preventa comienza el ${formatPreventaDate(preventaStart)} y estará disponible durante una semana.`;
+          preventaButton.textContent = 'Reservar preventa por 70 Bs →';
+          preventaButton.href = 'https://wa.me/59169334671?text=Hola,%20quiero%20reservar%20INERTIX%20en%20preventa';
+          return;
+        }
+        if (isActive) {
+          setCountdown(preventaEnd - now);
+          preventaStatus.textContent = 'Preventa activa · 70 Bs';
+          preventaMessage.textContent = `La preventa está activa. Asegura tu acceso antes del ${formatPreventaDate(preventaEnd)}.`;
+          preventaButton.textContent = 'Aprovechar preventa por 70 Bs →';
+          preventaButton.href = 'https://wa.me/59169334671?text=Hola,%20quiero%20comprar%20INERTIX%20en%20preventa';
+          return;
+        }
+        setCountdown(0);
+        preventaStatus.textContent = 'Preventa finalizada';
+        preventaMessage.textContent = 'La preventa ha finalizado. El valor regular es Bs. 100 / 50 Soles.';
+        preventaButton.textContent = 'Conocer INERTIX →';
+        preventaButton.href = 'https://wa.me/59169334671?text=Hola,%20quiero%20conocer%20INERTIX';
+      }
       syncViewportFormat();
       syncFloatingLogo();
+      updatePreventa();
+      window.setInterval(updatePreventa, 1000);
       window.addEventListener('resize', () => { syncViewportFormat(); syncFloatingLogo(); }, { passive: true });
       goTo(0);
       restart();
