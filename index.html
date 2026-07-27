@@ -28,12 +28,12 @@
   <main>
     <section class="preventa" id="preventa" aria-labelledby="preventa-title">
       <div class="wrap preventa-grid">
-        <div class="preventa-copy"><span class="kicker">Lanzamiento INERTIX</span><h2 id="preventa-title">Preventa por tiempo <em>limitado.</em></h2><p>Accede a INERTIX con un precio especial de lanzamiento y empieza a llevar tus cálculos de obra con mayor claridad, rapidez y respaldo técnico.</p><div class="price-row"><span class="price-tag">Precio de preventa</span><strong class="price">70 <small>Bs</small></strong></div></div>
+        <div class="preventa-copy"><span class="kicker">Lanzamiento INERTIX</span><h2 id="preventa-title">Preventa por tiempo <em>limitado.</em></h2><p>Accede a INERTIX con un precio especial de lanzamiento y empieza a llevar tus cálculos de obra con mayor claridad, rapidez y respaldo técnico.</p><div class="price-row"><span class="price-tag">Precio de preventa</span><strong class="price">60 <small>Bs</small></strong></div></div>
         <aside class="preventa-card" id="preventa-card" aria-live="polite" aria-atomic="true">
           <div class="preventa-card-head"><span id="preventa-status">Falta poco para la preventa</span><i class="status-dot" aria-hidden="true"></i></div>
           <div class="countdown" aria-label="Cuenta regresiva"><div class="countdown-unit"><strong class="countdown-value" id="preventa-days">00</strong><span class="countdown-label">Días</span></div><div class="countdown-unit"><strong class="countdown-value" id="preventa-hours">00</strong><span class="countdown-label">Horas</span></div><div class="countdown-unit"><strong class="countdown-value" id="preventa-minutes">00</strong><span class="countdown-label">Min</span></div><div class="countdown-unit"><strong class="countdown-value" id="preventa-seconds">00</strong><span class="countdown-label">Seg</span></div></div>
           <p class="preventa-message" id="preventa-message">La preventa inicia el jueves a las 8:00 a. m. y estará disponible durante una semana.</p>
-          <a class="btn" id="preventa-button" href="https://wa.me/59169334671?text=Hola,%20quiero%20reservar%20INERTIX%20en%20preventa" target="_blank" rel="noopener">Reservar preventa por 70 Bs →</a>
+          <a class="btn" id="preventa-button" href="https://wa.me/59169334671?text=Hola,%20quiero%20reservar%20INERTIX%20en%20preventa" target="_blank" rel="noopener">Reservar preventa por 60 Bs →</a>
         </aside>
       </div>
     </section>
@@ -68,8 +68,8 @@ INERTIX nace para resolver problemas reales en sitio donde supervisores, arquite
         minutes: document.querySelector('#preventa-minutes'),
         seconds: document.querySelector('#preventa-seconds')
       };
-      const preventaStart = new Date('2026-07-23T08:00:00-04:00');
-      const preventaEnd = new Date('2026-07-30T08:00:00-04:00');
+      const preventaStart = new Date('2026-07-27T08:00:00-04:00');
+      const preventaEnd = new Date('2026-07-31T08:00:00-04:00');
       let current = 0;
       let timer;
       function goTo(index) {
@@ -139,15 +139,15 @@ INERTIX nace para resolver problemas reales en sitio donde supervisores, arquite
           setCountdown(preventaStart - now);
           preventaStatus.textContent = 'Falta poco para la preventa';
           preventaMessage.textContent = `La preventa comienza el ${formatPreventaDate(preventaStart)} y estará disponible durante una semana.`;
-          preventaButton.textContent = 'Reservar preventa por 70 Bs →';
+          preventaButton.textContent = 'Reservar preventa por 60 Bs →';
           preventaButton.href = 'https://wa.me/59169334671?text=Hola,%20quiero%20reservar%20INERTIX%20en%20preventa';
           return;
         }
         if (isActive) {
           setCountdown(preventaEnd - now);
-          preventaStatus.textContent = 'Preventa activa · 70 Bs';
+          preventaStatus.textContent = 'Preventa activa · 60 Bs';
           preventaMessage.textContent = `La preventa está activa. Asegura tu acceso antes del ${formatPreventaDate(preventaEnd)}.`;
-          preventaButton.textContent = 'Aprovechar preventa por 70 Bs →';
+          preventaButton.textContent = 'Aprovechar preventa por 60 Bs →';
           preventaButton.href = 'https://wa.me/59169334671?text=Hola,%20quiero%20comprar%20INERTIX%20en%20preventa';
           return;
         }
