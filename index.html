@@ -143,14 +143,34 @@ INERTIX nace para resolver problemas reales en sitio donde supervisores, arquite
           preventaButton.href = 'https://wa.me/59169334671?text=Hola,%20quiero%20reservar%20INERTIX%20en%20preventa';
           return;
         }
-        if (isActive) {
-          setCountdown(preventaEnd - now);
-          preventaStatus.textContent = 'Preventa activa · 60 Bs';
-          preventaMessage.textContent = `La preventa está activa. Asegura tu acceso antes del ${formatPreventaDate(preventaEnd)}.`;
-          preventaButton.textContent = 'Aprovechar preventa por 60 Bs →';
-          preventaButton.href = 'https://wa.me/59169334671?text=Hola,%20quiero%20comprar%20INERTIX%20en%20preventa';
-          return;
-        }
+if (isActive) {
+
+    const miercoles = new Date('2026-07-29T08:00:00-04:00');
+    const jueves = new Date('2026-07-30T08:00:00-04:00');
+
+    let precio = 60;
+
+    if (now >= jueves) {
+        precio = 80;
+    } else if (now >= miercoles) {
+        precio = 70;
+    }
+
+    setCountdown(preventaEnd - now);
+
+    preventaStatus.textContent = `Preventa activa · ${precio} Bs`;
+
+    preventaMessage.textContent =
+        `La preventa está activa. Asegura tu acceso antes del ${formatPreventaDate(preventaEnd)}.`;
+
+    preventaButton.textContent =
+        `Aprovechar preventa por ${precio} Bs →`;
+
+    preventaButton.href =
+        `https://wa.me/59169334671?text=Hola,%20quiero%20comprar%20INERTIX%20en%20preventa%20por%20${precio}%20Bs`;
+
+    return;
+}
         setCountdown(0);
         preventaStatus.textContent = 'Preventa finalizada';
         preventaMessage.textContent = 'La preventa ha finalizado. El valor regular es Bs. 100 / 50 Soles.';
